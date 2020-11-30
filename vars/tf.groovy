@@ -11,11 +11,11 @@ void install(String version = '0.12.2' ) {
 
         CUSTOMBIN=`pwd`/.bin            #set custom bin path
 
-        export PATH=$PATH:$CUSTOMBIN    #Add custom bin path to PATH environment
+        export PATH=\$PATH:\$CUSTOMBIN    #Add custom bin path to PATH environment
 
         echo "setting tf version to ${version} "
 
-        tfswitch -b $CUSTOMBIN/terraform ${version}
+        tfswitch -b \$CUSTOMBIN/terraform ${version}
 
         terraform -v       
 
