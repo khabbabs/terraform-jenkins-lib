@@ -1,4 +1,4 @@
-void install(String version = '12.0' ) {
+void install(String version = '0.12.2' ) {
 
     sh '''
         #!/bin/bash 
@@ -14,7 +14,7 @@ void install(String version = '12.0' ) {
 
         export PATH=$PATH:$CUSTOMBIN    #Add custom bin path to PATH environment
 
-        $CUSTOMBIN/tfswitch -b $CUSTOMBIN/terraform 0.11.7 #or simply tfswitch -b $CUSTOMBIN/terraform 0.11.7
+        tfswitch -b $CUSTOMBIN/terraform ${version}
 
         terraform -v       
 
