@@ -1,6 +1,6 @@
 void install(String version = '0.12.2' ) {
 
-    sh '''#!/bin/bash -xe 
+    sh """#!/bin/bash
 
         echo "Installing tfswitch locally"
         wget https://raw.githubusercontent.com/warrensbox/terraform-switcher/release/install.sh #Get the installer on to your machine
@@ -19,6 +19,6 @@ void install(String version = '0.12.2' ) {
 
         terraform -v       
 
-    '''
+    """
     
 }
