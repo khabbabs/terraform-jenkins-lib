@@ -17,8 +17,16 @@ void install(String version = '0.12.2' ) {
 
         tfswitch -b \$CUSTOMBIN/terraform ${version}
 
-        terraform -v       
+        terraform -v
+
+        aws --version
 
     """
     
 }
+
+// void init(body){
+
+//     sh "CUSTOMBIN=`pwd`/.bin && export PATH=\$PATH:\$CUSTOMBIN"
+
+// }
